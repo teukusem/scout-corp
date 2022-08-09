@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scout Test</title>
+    <style>
+      .rows {
+        margin: 50px;
+        display: grid;
+        grid-template-columns: 5fr 5fr 5fr;
+        grid-column-gap: 20px;
+      }
+
+      .boxes {
+        margin: 50px;
+        display: grid;
+        grid-template-columns: 5fr 5fr 150px;
+        grid-column-gap: 20px;
+      }
+
+      .col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        border: 1px solid black;
+      }
+      .table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .table tbody tr td {
+        border: 1px solid black;
+        padding: 8px;
+        letter-spacing: 0.35px;
+        font-weight: normal;
+      }
+
+      @media (max-width: 480px) {
+        .rows {
+          margin: 20px;
+          display: grid;
+          gap: 20px 0px;
+          grid-template-columns: 100%;
+        }
+        .table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+        .table tbody tr td {
+          display: block;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .rows {
+          margin: 50px;
+          display: grid;
+          gap: 20px 10px;
+          grid-template-columns: 5fr 5fr 5fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>All boxes decrease or increase</h1>
+      <div class="rows">
+        <div id="box" class="col">1</div>
+        <div id="box2" class="col">2</div>
+        <div id="box3" class="col">3</div>
+      </div>
+
+      <h1>Only box 1 and box 2 decrease or increase</h1>
+      <div class="boxes">
+        <div id="box" class="col">4</div>
+        <div id="box2" class="col">5</div>
+        <div id="box3" class="col">6</div>
+      </div>
+      <h1>Table</h1>
+      <div>
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>name (string)</td>
+              <td>Title (Mr/Ms)</td>
+            </tr>
+            <tr>
+              <td>name (string)</td>
+              <td>Title (Mr/Ms)</td>
+            </tr>
+            <tr>
+              <td>name (string)</td>
+              <td>Title (Mr/Ms)</td>
+            </tr>
+            <tr>
+              <td>name (string)</td>
+              <td>Title (Mr/Ms)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="colums.js"></script>
+  </body>
+</html>
